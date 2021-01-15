@@ -1,0 +1,10 @@
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\Blue Badge\IntroToApi\IntroToApi\bin\Debug\IntroToApi.exe.config
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\Blue Badge\IntroToApi\IntroToApi\bin\Debug\IntroToApi.exe
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\Blue Badge\IntroToApi\IntroToApi\bin\Debug\IntroToApi.pdb
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\Blue Badge\IntroToApi\IntroToApi\obj\Debug\IntroToApi.csprojAssemblyReference.cache
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\Blue Badge\IntroToApi\IntroToApi\obj\Debug\IntroToApi.csproj.CoreCompileInputs.cache
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\Blue Badge\IntroToApi\IntroToApi\obj\Debug\IntroToApi.exe
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\Blue Badge\IntroToApi\IntroToApi\obj\Debug\IntroToApi.pdb
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\Blue Badge\IntroToApi\IntroToApi\bin\Debug\Newtonsoft.Json.dll
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\Blue Badge\IntroToApi\IntroToApi\bin\Debug\Newtonsoft.Json.xml
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\Blue Badge\IntroToApi\IntroToApi\obj\Debug\IntroToApi.csproj.CopyComplete
