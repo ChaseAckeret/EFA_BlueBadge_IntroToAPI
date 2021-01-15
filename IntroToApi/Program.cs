@@ -19,10 +19,21 @@ namespace IntroToApi
 
             if (response.IsSuccessStatusCode)
             {
-                var content = response.Content.ReadAsStringAsync().Result;
-                var person = JsonConvert.DeserializeObject<Person>(content);
+                //var content = response.Content.ReadAsStringAsync().Result;
+                //var person = JsonConvert.DeserializeObject<Person>(content);
 
-                var luke = response.Content.ReadAsAsync<Person>(); 
+                var luke = response.Content.ReadAsAsync<Person>().Result;
+                Console.WriteLine(luke.Name);
+
+                foreach (string vehicleUrl in luke.Vehicles)
+                {
+                    HttpResponseMessage vehicleResponse = httpClient.GetAsync(vehicleUrl).Result;
+                    //Console.WriteLine(vehicleResponse.Content.ReadAsStringAsync().Result);
+
+                    Vehicle vehicle = vehicleResponse.Content.ReadAsAsync<Vehicle>().Result;
+                    Console.WriteLine(vehicle.Name);
+                }
+                Console.ReadKey();
             }
         }
     }

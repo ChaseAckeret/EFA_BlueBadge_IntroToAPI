@@ -8,3 +8,5 @@ C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\Blue Badge\IntroToApi\IntroT
 C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\Blue Badge\IntroToApi\IntroToApi\bin\Debug\Newtonsoft.Json.dll
 C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\Blue Badge\IntroToApi\IntroToApi\bin\Debug\Newtonsoft.Json.xml
 C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\Blue Badge\IntroToApi\IntroToApi\obj\Debug\IntroToApi.csproj.CopyComplete
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\Blue Badge\IntroToApi\IntroToApi\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\Blue Badge\IntroToApi\IntroToApi\bin\Debug\System.Net.Http.Formatting.xml
