@@ -35,6 +35,21 @@ namespace IntroToApi
                 }
                 Console.ReadKey();
             }
+
+            Console.WriteLine();
+
+            SWAPIService service = new SWAPIService();
+            Person person = service.GetPersonAsync("https://swapi.dev/api/people/11").Result;
+            if(person != null)
+            {
+                Console.WriteLine(person.Name);
+
+                foreach( var vehicleUrl in person.Vehicles)
+                {
+                    var vehicle = service.GetVehicleAsync(vehicleUrl).Result;
+                    Console.WriteLine(vehicle.Name);
+                }
+            }
         }
     }
 }
