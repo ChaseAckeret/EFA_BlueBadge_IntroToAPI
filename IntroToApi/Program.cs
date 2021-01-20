@@ -64,6 +64,18 @@ namespace IntroToApi
                 Console.WriteLine("Targeted object does not exist.");
             }
             Console.ReadKey();
+
+            Console.WriteLine();
+
+            SearchResult<Person> skywalkers = service.GetPersonSearchAsync("skywalker").Result;
+
+            foreach( Person p in skywalkers.Results)
+            {
+                Console.WriteLine(p.Name);
+            }
+
+            var genericSearch = service.GetSearchAsync<Vehicle>("speeder", "vehicles").Result;
+            var vehicleSearch = service.GetVehicleSearchAsync("speeder").Result;
         }
     }
 }

@@ -49,5 +49,29 @@ namespace IntroToApi
             //return default;
             return null;
         }
+
+        public async Task<SearchResult<Person>> GetPersonSearchAsync(string query)
+        {
+            HttpResponseMessage response = await _httpClient.GetAsync("https://swapi.dev/api/people?search=" + query);
+
+            if (response.IsSuccessStatusCode)
+                return await response.Content.ReadAsAsync<SearchResult<Person>>();
+
+            return null;
+        }
+
+        public async Task<SearchResult<T>> GetSearchAsync<T>(string query, string category)
+        {
+            HttpResponseMessage response = await _httpClient.GetAsync($"https://swapi.dev/api/{category}?search={query}");
+
+            return response.IsSuccessStatusCode
+                ? await response.Content.ReadAsAsync<SearchResult<T>>()
+                : default;
+        }
+
+        public async Task<SearchResult<Vehicle>> GetVehicleSearchAsync(string query)
+        {
+            return await GetSearchAsync<Vehicle>(query, "vehicles");
+        }
     }
 }
