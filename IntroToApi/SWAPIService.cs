@@ -14,7 +14,8 @@ namespace IntroToApi
 
         public async Task<Person> GetPersonAsync(string url)
         {
-            HttpResponseMessage response = await _httpClient.GetAsync(url);
+            /*
+              HttpResponseMessage response = await _httpClient.GetAsync(url);
 
             if (response.IsSuccessStatusCode)
             {
@@ -22,17 +23,30 @@ namespace IntroToApi
                 return person;
             }
             return null;
+            */
+
+            return await GetAsync<Person>(url);
         }
 
         public async Task<Vehicle> GetVehicleAsync(string url)
+        {
+            var response = await _httpClient.GetAsync(url);
+
+            return response.IsSuccessStatusCode
+                ? await response.Content.ReadAsAsync<Vehicle>()
+                : null;
+        }
+
+        public async Task<T> GetAsync<T>(string url) where T : class
         {
             HttpResponseMessage response = await _httpClient.GetAsync(url);
 
             if (response.IsSuccessStatusCode)
             {
-                Vehicle vehicle = await response.Content.ReadAsAsync<Vehicle>();
-                return vehicle;
+                T content = await response.Content.ReadAsAsync<T>();
+                return content;
             }
+            //return default;
             return null;
         }
     }
